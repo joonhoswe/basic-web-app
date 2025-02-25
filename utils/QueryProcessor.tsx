@@ -87,5 +87,9 @@ export default function QueryProcessor(query: string): string {
     return "62";
   }
 
+  if (query.toLowerCase().includes("plus")) {
+    return query.substring(8, 10) + query.substring(16, 18);
+  }
+
   return "";
 }
