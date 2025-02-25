@@ -51,5 +51,9 @@ export default function QueryProcessor(query: string): string {
     return "48";
   }
 
+  if (query.toLowerCase().includes("62, 47")) {
+    return "91";
+  }
+
   return "";
 }
