@@ -96,7 +96,10 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("plus")) {
-    return query.substring(8, 10) + query.substring(16, 18);
+    const numbers = query.match(/\d+/g);
+    if (numbers && numbers.length >= 2) {
+      return (parseInt(numbers[0]) + parseInt(numbers[1])).toString();
+    }
   }
 
   return "";
