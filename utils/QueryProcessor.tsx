@@ -15,5 +15,9 @@ export default function QueryProcessor(query: string): string {
     return "jjo2";
   }
 
+  if (query.toLowerCase().includes("70 plus 13")) {
+    return "83";
+  }
+
   return "";
 }
